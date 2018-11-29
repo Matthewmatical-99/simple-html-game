@@ -2,7 +2,7 @@ var gameOver = false;
 var loseTimer;
 var border = 150;
 
-function clickHandlerFeh() {
+function buttonClickHandler() {
 	var scoreElem = document.getElementById("score");
 	if (gameOver) {
 		scoreElem.innerHTML = "Score: 0";
@@ -12,7 +12,7 @@ function clickHandlerFeh() {
 		scoreElem.innerHTML = "Score: " + (Number(scoreElem.innerHTML.replace("Score: ", "")) + 1);
 	}
 	
-	var button = document.getElementById("feh");
+	var button = document.getElementById("theButton");
 	button.innerHTML = "Quick, click me again!";
 	var w = document.defaultView.innerWidth - button.style.width - border;
 	var h = document.defaultView.innerHeight - button.style.height - border;
@@ -27,5 +27,5 @@ function clickHandlerFeh() {
 function endGame() {
 	gameOver = true;
 	document.getElementById("status").innerHTML = "Game over!";
-	document.getElementById("feh").innerHTML = "Click me to restart.";
+	document.getElementById("theButton").innerHTML = "Click me to restart.";
 }
